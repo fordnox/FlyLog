@@ -15,10 +15,17 @@ To run the app locally clone this repo. Then run `bundle install` in your termin
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/achasveachas/FlyLog or by email to [contact@yechiel.me](mailto:contact@yechiel.me) 
+Bug reports and pull requests are welcome on GitHub at https://github.com/achasveachas/FlyLog or by email to [contact@yechiel.me](mailto:contact@yechiel.me)
 This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+## Docker
+
+    docker build . -t flylog:1
+    docker run -p 3000:3000 -v ${PWD}/db:/app/db flylog:1
+    rake db:migrate
+
